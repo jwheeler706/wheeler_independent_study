@@ -33,7 +33,7 @@ The data provided in the repository can be used to get an example visualization 
 
 ##
 
-Creating the files can take some time. The jobs I ran on the hpcc lasted 4 hours and created between 300-400 object files. Conversion to vtk really depends on the complexity of the mesh. Lo-res files can be converted in a few minutes, but more complicated meshes can take ~20 minutes to convert a few hundred.
+Creating the files can take some time. The jobs I ran on the hpcc lasted 4 hours and created between 300-400 object files. Conversion to vtk really depends on the complexity of the mesh. Small files can be converted in a few minutes, but more complicated meshes can take ~20 minutes to convert a few hundred.
 
 If using several layers, import each one individually. 
 It is possible to grab multiple layers at once, but you have to try to grab them at a common intersection. 
