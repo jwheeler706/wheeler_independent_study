@@ -1,0 +1,44 @@
+### call with qsub -F "<that number>" make_obj_script.qsub ###
+
+#!/bin/bash --login
+
+### Set PBS parameters ###
+
+# Time job will take to execute (HH:MM:SS format)
+#PBS -l walltime=4:00:00
+
+# Memory needed by the job (not strictly necessary)
+#PBS -l mem=16gb
+
+# Number of nodes required and the number of processors per node
+#PBS -l nodes=4:ppn=2
+
+# Make output and error files the same file
+#PBS -j oe
+
+# Send an email when a job is aborted, begins or ends
+#PBS -m abe
+
+# Specify the email address
+#PBS -M wheel219@msu.edu
+
+# Give the job a name
+#PBS -N obj_test
+ 
+ 
+cd ${PBS_O_WORKDIR}       # Change to the Original Working Directory
+                          # that is, the directory where "qsub" was called
+
+
+module load GNU/6.2
+module unload Python/2.7.2
+
+export LD_LIBRARY_PATH=/opt/software/GCC/6.2/lib64:$HOME/local/lib:$HOME/anaconda3/lib:$LD_LIBRARY_PATH
+
+# example yt script execution in parallel
+mpirun -np 4 python make_obj_files.py $1
+
+# example enzo parallel execution
+#mpirun -np 4 ./enzo.exe -d SedovBlastAMR.enzo
+
+
