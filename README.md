@@ -12,7 +12,7 @@ submit_jobs.qsub - Script to submit job to the hpcc. Time, nodes, memory, and na
 
 
 ## 1. Create object files; files can be run locally or on the hpcc
-* Locally - Call script, choosing a specific density for obj mesh: "python make_obj_files.py <density>"
+* Locally - Call python script, choosing a specific density for obj mesh: "python make_obj_files.py <density>"
 * Hpcc - Call qsub script, again choosing density: "qsub -F <density> submit_jobs.qsub"
 * Default set to 4 hours, 16gb, 4 nodes
 
