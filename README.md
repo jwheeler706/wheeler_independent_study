@@ -30,7 +30,7 @@ submit_jobs.qsub - Script to submit job to the hpcc. Time, nodes, memory, and na
 * Click to send to OpenVR and press play to start the animation!
 
 ## Mini-tutorial
-The data provided in the repository can be used to get an example visualization in Paraview. The object files were made with <code>python make_obj_files.py 25</code> with the folders ranging from DD0750 to DD1250. Convert to vtk with <code>python make_vtk.py</code> and entering "example_data/e25/" when prompted. Similarly, with e25 and e27. The files can then be opened and view in Paraview.
+The data provided in the repository can be used to get an example visualization in Paraview. The object files were made with <code>python make_obj_files.py 25</code> with the folders ranging from DD0950 to DD1099. Convert to vtk with <code>python make_vtk.py</code> and entering "example_data/e25/" when prompted. The files can then be opened and view in Paraview.
 
 ##
 
