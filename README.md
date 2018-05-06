@@ -23,11 +23,9 @@ submit_jobs.qsub - Script to submit job to the hpcc. Time, nodes, memory, and na
 
 ## 3. View in paraview
 * Put all vtk files in single directory
-* In Paraview, open the file menu
-* All of the vtk files should aggregate together into a group
+* In Paraview, open the file menu, all of the vtk files should aggregate together into a group
 * Open the group of files and choose "VTK PolyData Files" when prompted to choose data type
-* Click the eye next to the group in Paraview to show the mesh
-* Color and transparency can be adjusted in the properties menu
+* Click the eye next to the group in Paraview to show the mesh; color and transparency can be adjusted in the properties menu
 * Click to send to OpenVR and press play to start the animation!
 
 If using several layers, import each one individually. 
