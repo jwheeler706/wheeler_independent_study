@@ -1,4 +1,4 @@
-### call with qsub -F "<that number>" make_obj_script.qsub ###
+### call with qsub -F "<density>" submit_jobs.qsub ###
 
 #!/bin/bash --login
 
