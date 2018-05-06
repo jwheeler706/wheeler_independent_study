@@ -17,6 +17,7 @@ submit_jobs.qsub - Script to submit job to the hpcc. Time, nodes, memory, and na
 * Default set to 4 hours, 16gb, 4 nodes
 
 ## 2. Create vtk files for paraview
+* If necessary, install vtk package (<code>pip install vtk</code> will suffice)
 * Call vtk script
 * Script prompts user for path to object files
 * Output files should end with number corresponding to frame
@@ -28,7 +29,13 @@ submit_jobs.qsub - Script to submit job to the hpcc. Time, nodes, memory, and na
 * Click the eye next to the group in Paraview to show the mesh; color and transparency can be adjusted in the properties menu
 * Click to send to OpenVR and press play to start the animation!
 
+## Mini-tutorial
+The data provided in the repository can be used to get an example visualization in Paraview. The object files were made with the command "python make_obj_files.py 26" with the folders ranging from "DD0750" to "DD1250". To convert them to vtk, type "
+
 If using several layers, import each one individually. 
 It is possible to grab multiple layers at once, but you have to try to grab them at a common intersection. 
 Paraview can have difficulties rendering several/complex meshes and can become laggy. 
 Couldn't figure out how to control the time with the remotes, but that would be very useful.
+
+The data used in the example comes from /mnt/research/galaxies-REU/sims/isolated-galaxies/MW_1638kpcBox_800pcCGM_200pcDisk_lowres/ on the MSU hpcc. That path contains folders with data for the simulation at certain timesteps. The python files were written with this file/naming system in mind, so some modifications might be needed to be compatible with other schemes.
+
