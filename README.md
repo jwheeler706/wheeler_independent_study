@@ -12,23 +12,23 @@ submit_jobs.qsub - Script to submit job to the hpcc. Time, nodes, memory, and na
 
 
 ## 1. Create object files; files can be run locally or on the hpcc
-1. Locally - Call script, choosing a specific density for obj mesh: "python make_obj_files.py <density>"
-1. Hpcc - Call qsub script, again choosing density: "qsub -F <density> submit_jobs.qsub"
-1. Default set to 4 hours, 16gb, 4 nodes
+* Locally - Call script, choosing a specific density for obj mesh: "python make_obj_files.py <density>"
+* Hpcc - Call qsub script, again choosing density: "qsub -F <density> submit_jobs.qsub"
+* Default set to 4 hours, 16gb, 4 nodes
 
 ## 2. Create vtk files for paraview
-   a. Call vtk script
-   b. Script prompts user for path to object files
-   c. Output files should end with number corresponding to frame
+* Call vtk script
+* Script prompts user for path to object files
+* Output files should end with number corresponding to frame
 
 ## 3. View in paraview
-   a. Put all vtk files in single directory
-   b. In Paraview, open the file menu
-   c. All of the vtk files should aggregate together into a group
-   d. Open the group of files and choose "VTK PolyData Files" when prompted to choose data type
-   f. Click the eye next to the group in Paraview to show the mesh
-   g. Color and transparency can be adjusted in the properties menu
-   h. Click to send to OpenVR and press play to start the animation!
+* Put all vtk files in single directory
+* In Paraview, open the file menu
+* All of the vtk files should aggregate together into a group
+* Open the group of files and choose "VTK PolyData Files" when prompted to choose data type
+* Click the eye next to the group in Paraview to show the mesh
+* Color and transparency can be adjusted in the properties menu
+* Click to send to OpenVR and press play to start the animation!
 
 If using several layers, import each one individually. 
 It is possible to grab multiple layers at once, but you have to try to grab them at a common intersection. 
