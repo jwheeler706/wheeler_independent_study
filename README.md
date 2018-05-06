@@ -18,7 +18,7 @@ submit_jobs.qsub - Script to submit job to the hpcc. Time, nodes, memory, and na
 
 ## 2. Create vtk files for paraview
 * If necessary, install vtk package (<code>pip install vtk</code> will suffice)
-* Call vtk script, specifying input and output paths: <code>python make_vtk.py e25/e25_0-499/ e25/e25_vtk/</code>
+* Call vtk script, specifying input and output paths: <code>python make_vtk.py \<input\> \<output\></code>
 * Output files should end with number corresponding to frame
 
 ## 3. View in paraview
