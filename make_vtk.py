@@ -11,7 +11,7 @@ def make_vtk_files(path):
         # Output name doesn't matter except each file should end with a number
         e = file.split('/')[0]
         n_frame = int(file.split('DD')[1].split('_')[0])-50
-        output_name = './vtk/'+e+'_density_'+str(n_frame)+'.vtk'
+        output_name = path+'/vtk/'+e+'_density_'+str(n_frame)+'.vtk'
 
         reader = vtk.vtkOBJReader()
         reader.SetFileName(file)
