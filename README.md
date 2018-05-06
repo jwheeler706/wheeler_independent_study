@@ -38,5 +38,5 @@ It is possible to grab multiple layers at once, but you have to try to grab them
 Paraview can have difficulties rendering several/complex meshes and can become laggy. 
 Couldn't figure out how to control the time with the remotes, but that would be very useful.
 
-The data used in the example comes from /mnt/research/galaxies-REU/sims/isolated-galaxies/MW_1638kpcBox_800pcCGM_200pcDisk_lowres/ on the MSU hpcc. That path contains folders with data for the simulation at certain timesteps. The python files were written with this file/naming system in mind, so some modifications might be needed to be compatible with other schemes.
+The data used in the example comes from <code>/mnt/research/galaxies-REU/sims/isolated-galaxies/MW_1638kpcBox_800pcCGM_200pcDisk_lowres/</code> on the MSU hpcc. That path contains folders with data for the simulation at certain timesteps. The python files were written with this file/naming system in mind, so some modifications might be needed to be compatible with other schemes.
 
