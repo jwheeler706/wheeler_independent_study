@@ -1,7 +1,7 @@
 ### This script converts all the object files in a folder into vtk files ###
 
 import vtk
-import glob, os
+import glob, os, sys
 
 def make_vtk_files(path):
     for i,file in enumerate(glob.glob(path+"*")):
@@ -24,5 +24,5 @@ def make_vtk_files(path):
         writer.Update()
         writer.Write()
 
-path = input("Please enter the path to the data\n")
+path = sys.argv[1]
 make_vtk_files(path)
