@@ -29,14 +29,16 @@ submit_jobs.qsub - Script to submit job to the hpcc. Time, nodes, memory, and na
 * Click to send to OpenVR and press play to start the animation!
 
 ## Mini-tutorial
-The data provided in the repository can be used to get an example visualization in Paraview. The object files were made with <code>python make_obj_files.py 25</code> (also with density 26 and 27) with folders ranging from DD0750 to DD0999. Convert to vtk with <code>python make_vtk.py example_data/e25/ example_data/vtk/</code>, and similarly with the other two densities. The files can then be opened and view in Paraview. I recommend messing around with the coloring and opacity.
+The data provided in the repository can be used to get an example visualization in Paraview. The data comes from simulations done by Brian O'shea. The object files were made with <code>python make_obj_files.py 25</code> (also with density 26 and 27, path to data on hpcc given below) with folders ranging from DD0750 to DD0999. Convert to vtk with <code>python make_vtk.py example_data/e25/ example_data/vtk/</code>, and similarly with the other two densities. The files can then be opened and view in Paraview. I recommend messing around with the coloring and opacity.
 
 ##
+
+Creating the files can take some time. The jobs I ran on the hpcc lasted 4 hours and created between 300-400 object files. Conversion to vtk really depends on the complexity of the mesh. Lo-res files can be converted in a few minutes, but more complicated meshes can take ~20 minutes to convert a few hundred.
 
 If using several layers, import each one individually. 
 It is possible to grab multiple layers at once, but you have to try to grab them at a common intersection. 
 Paraview can have difficulties rendering several/complex meshes and can become laggy. 
 Couldn't figure out how to control the time with the remotes, but that would be very useful.
 
-The data used in the example comes from <code>/mnt/research/galaxies-REU/sims/isolated-galaxies/MW_1638kpcBox_800pcCGM_200pcDisk_lowres/</code> on the MSU hpcc. That path contains folders with data for the simulation at certain timesteps. The python files were written with this file/naming system in mind, so some modifications might be needed to be compatible with other schemes.
+The data used in the example comes from <code>/mnt/research/galaxies-REU/sims/isolated-galaxies/MW_1638kpcBox_800pcCGM_200pcDisk_lowres/</code> on the MSU hpcc. That path contains folders with data for the simulation at certain timesteps of the form <code>DD####</code>. The python files were written with this file/naming system in mind, so some modifications might be needed to be compatible with other schemes.
 
