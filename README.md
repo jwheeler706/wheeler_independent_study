@@ -12,8 +12,8 @@ submit_jobs.qsub - Script to submit job to the hpcc. Time, nodes, memory, and na
 
 
 ## 1. Create object files; files can be run locally or on the hpcc
-* Locally - Call python script, choosing a specific density for obj mesh: "python make_obj_files.py \<density\>"
-* Hpcc - Call qsub script, again choosing density: "qsub -F \<density\> submit_jobs.qsub"
+* Locally - Call python script, choosing a specific density for obj mesh: <code>python make_obj_files.py \<density\></code>
+* Hpcc - Call qsub script, again choosing density: <code>qsub -F \<density\> submit_jobs.qsub</code>
 * Default set to 4 hours, 16gb, 4 nodes
 
 ## 2. Create vtk files for paraview
@@ -30,7 +30,7 @@ submit_jobs.qsub - Script to submit job to the hpcc. Time, nodes, memory, and na
 * Click to send to OpenVR and press play to start the animation!
 
 ## Mini-tutorial
-The data provided in the repository can be used to get an example visualization in Paraview. The object files were made with the command "python make_obj_files.py 26" with the folders ranging from "DD0750" to "DD1250". To convert them to vtk, type "
+The data provided in the repository can be used to get an example visualization in Paraview. The object files were made with <code>python make_obj_files.py 26</code> with the folders ranging from DD0750 to DD1250. Convert to vtk with <code>python make_vtk.py</code> and entering "e26/" when prompted. Similarly, with e25 and e27. The files can then be opened and view in Paraview.
 
 If using several layers, import each one individually. 
 It is possible to grab multiple layers at once, but you have to try to grab them at a common intersection. 
